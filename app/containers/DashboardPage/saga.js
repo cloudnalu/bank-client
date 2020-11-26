@@ -36,13 +36,13 @@ export function* getAvailableFunds() {
     //   call(getAccountBalanceHistory),
     // ]);
 
-    // yield put(
-    //   getAvailableFundsSuccessAction(
-    //     amountMoney,
-    //     currencyName,
-    //     accountBalanceHistory,
-    //   ),
-    // );
+    yield put(
+      getAvailableFundsSuccessAction(
+        "0",
+        "USD",
+        [],
+      ),
+    );
   } catch (error) {
     yield put(getAvailableFundsErrorAction(error));
     yield put(push(routes.login.path));
@@ -64,7 +64,7 @@ function* getAmountMoney() {
     //   requestParameters,
     // );
 
-    // return yield { amountMoney, currencyName };
+    return yield { amountMoney: 0.00, currencyName: "USD" };
   } catch (error) {
     throw new Error(error);
   }
@@ -108,9 +108,9 @@ export function* getAccountBalance() {
 
     // const revenuesPercent =
     //   ((Number(revenues) - Number(expenses)) / Number(revenues)) * 100;
-    // let savingsPercent;
-    // let savingsData;
-    // let savingsColors;
+    let savingsPercent;
+    let savingsData;
+    let savingsColors;
 
     // if (Number(revenues) === Infinity) {
     //   savingsPercent = 100;
@@ -138,15 +138,18 @@ export function* getAccountBalance() {
     //     { name: 'expenses', value: parseFloat(expenses) },
     //   ];
     // }
+    savingsPercent = 0;
+    savingsColors = ['#b8b8b8'];
+    savingsData = [{ name: 'savings', value: 100 }];
 
-    // yield put(
-    //   getAccountBalanceSuccessAction(
-    //     currencyName,
-    //     savingsPercent,
-    //     savingsData,
-    //     savingsColors,
-    //   ),
-    // );
+    yield put(
+      getAccountBalanceSuccessAction(
+        "USD",
+        savingsPercent,
+        savingsData,
+        savingsColors,
+      ),
+    );
   } catch (error) {
     yield put(getAccountBalanceErrorAction(error));
     yield put(push(routes.login.path));
@@ -163,7 +166,7 @@ export function* getBills() {
 
   try {
     // const { data } = yield call(request, requestURL, requestParameters);
-    // yield put(getBillsSuccessAction(data));
+    yield put(getBillsSuccessAction([]));
   } catch (error) {
     yield put(getBillsErrorAction(error));
     yield put(push(routes.login.path));
@@ -180,7 +183,7 @@ export function* getRecentTransactions() {
 
   try {
     // const { data } = yield call(request, requestURL, requestParameters);
-    // yield put(getRecentTransactionsSuccessAction(data));
+    yield put(getRecentTransactionsSuccessAction([]));
   } catch (error) {
     yield put(getRecentTransactionsErrorAction(error));
     yield put(push(routes.login.path));

@@ -66,7 +66,7 @@ const dashboardPageReducer = produce((draft, action) => {
       break;
     case GET_ACCOUNT_BALANCE_SUCCESS:
       draft.currencyName = action.currencyName;
-      draft.savings = action.savings.toFixed(1).replace('.', ',');
+      draft.savings = action.savings.toFixed(1);
       draft.savingsData = action.savingsData;
       draft.savingsColors = action.savingsColors;
       break;

@@ -24,8 +24,8 @@ export function* getTransactionHistory({ currentPage }) {
   };
 
   try {
-    const transactions = yield call(request, requestURL, requestParameters);
-    yield put(getTransactionHistorySuccessAction(transactions));
+    // const transactions = yield call(request, requestURL, requestParameters);
+    // yield put(getTransactionHistorySuccessAction(transactions));
   } catch (error) {
     yield put(getTransactionHistoryErrorAction(error));
     yield put(push(routes.login.path));
@@ -42,11 +42,11 @@ export function* getConfirmationFile({ uuid }) {
   };
 
   try {
-    const response = yield call(request, requestURL, requestParameters, false);
-    const pdfBlob = new Blob([response], { type: 'application/pdf' });
-    saveAs(pdfBlob, `${uuid}.pdf`);
+    // const response = yield call(request, requestURL, requestParameters, false);
+    // const pdfBlob = new Blob([response], { type: 'application/pdf' });
+    // saveAs(pdfBlob, `${uuid}.pdf`);
 
-    yield put(getConfirmationFileSuccessAction());
+    // yield put(getConfirmationFileSuccessAction());
   } catch (error) {
     yield put(getConfirmationFileErrorAction(error));
     yield put(push(routes.login.path));

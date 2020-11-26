@@ -27,6 +27,7 @@ const Login = () => {
       clientId,
       redirectUri,
       logo,
+      features: { registration:true },
       i18n: {
         en: {
           'primaryauth.title': 'Sign in to Cloudnalu using Okta',

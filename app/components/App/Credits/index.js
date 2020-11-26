@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { LineChartOutlined } from '@ant-design/icons';
+import { WalletOutlined } from '@ant-design/icons';
 import { StyledCard, StyledCardContent } from 'components/App/Card/styles';
 import {
   StyledButton,
@@ -21,7 +21,7 @@ export default function Credits() {
           extra={
             <StyledButton type="link">
               <StyledButtonContent onMouseDown={(e) => e.stopPropagation()}>
-                <LineChartOutlined /> <FormattedMessage {...messages.action} />
+                <WalletOutlined /> <FormattedMessage {...messages.action} />
               </StyledButtonContent>
             </StyledButton>
           }

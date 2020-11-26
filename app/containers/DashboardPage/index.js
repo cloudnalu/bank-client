@@ -54,7 +54,7 @@ export default function DashboardPage() {
   const { authState, oktaAuth } = useOktaAuth();
 
   useEffect(() => {
-    if (authState.isAuthenticated && !authState.isPending) {
+    if (authState.isAuthenticated) {
       oktaAuth.getUser().then(userData => {
         dispatch(setUserDataSuccessAction(userData))
       });
@@ -64,7 +64,6 @@ export default function DashboardPage() {
     }
     }, [authState])
 
-    console.log(user)
   return (
     <>
       <FormattedMessage {...messages.dashboard}>

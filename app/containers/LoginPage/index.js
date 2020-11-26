@@ -34,11 +34,11 @@ export default function LoginPage() {
       <Header />
       <Subheader pageTitle={routes.login.name} />
 
-      <Information />
+      {/* <Information /> */}
 
       <LoginForm />
 
-      <RedirectToggle />
+      {/* <RedirectToggle /> */}
       <Footer />
 
       <ConstantCookie />

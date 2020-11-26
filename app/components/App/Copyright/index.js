@@ -5,8 +5,8 @@ export default function Copyright() {
   return (
     <StyledCopyright>
       Copyright &copy; {new Date().getFullYear()}. Made by{' '}
-      <a href="https://github.com/pietrzakadrian" target="_blank">
-        Adrian Pietrzak
+      <a href="https://github.com/cloudnalu" target="_blank">
+        Cloud Nalu
       </a>
     </StyledCopyright>
   );

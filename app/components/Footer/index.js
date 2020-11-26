@@ -23,11 +23,11 @@ export default function Footer() {
 
   return (
     <StyledFooter>
-      <StyledWarning>
+      {/* <StyledWarning>
         <StyledInfoCircleOutlined />
         <FormattedMessage {...messages.header} />
-      </StyledWarning>
-
+      </StyledWarning> */}
+{/* 
       <div>
         <FormattedMessage {...messages.subheader} />
         <ul>
@@ -42,7 +42,7 @@ export default function Footer() {
 
       <StyledTip>
         <FormattedMessage {...messages.warning} />
-      </StyledTip>
+      </StyledTip> */}
 
       <div>
         <FormattedMessage {...messages.footer} />{' '}
