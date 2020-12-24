@@ -35,7 +35,7 @@
   "app.components.HeaderAction.pop.confirm.cancel": "Cancel",
   "app.components.HeaderAction.pop.confirm.ok": "Yes",
   "app.components.HeaderAction.pop.confirm.title": "Are you sure you want to log out?",
-  "app.components.Information.content": "If you take advantage of our promotion and register your account by the end of this year, you will receive 10,00 USD from us. Accounts already created will also receive this from us.",
+  "app.components.Information.content": "Welcome to Nalu Bank, a bitcoin brokerage and services app by Cloud Nalu",
   "app.components.LoginForm.LoginAction.login": "Log In",
   "app.components.LoginForm.LoginAction.next": "Next",
   "app.components.LoginForm.LoginAction.previous": "Previous",
